@@ -1,0 +1,10 @@
+project_slug: "trackpy"
+project_url: "https://soft-matter.github.io/trackpy/"
+serverkit_repo_url: "https://github.com/Imaging-Server-Kit/serverkit-trackpy"
+serverkit_author: "EPFL Center for Imaging"
+project_name: "Trackpy"
+description: "Fast, Flexible Particle-Tracking Toolkit."
+used_for:
+  - "Tracking"
+tags:
+  - ""
