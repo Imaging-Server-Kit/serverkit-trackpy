@@ -3,8 +3,6 @@
 
 Implementation of a web server for [Trackpy](https://soft-matter.github.io/trackpy/) (linking only).
 
-Author: EPFL Center for Imaging
-
 ## Installing the algorithm server with `pip`
 
 Install dependencies:
