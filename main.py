@@ -2,6 +2,7 @@
 Algorithm server definition.
 Documentation: https://github.com/Imaging-Server-Kit/cookiecutter-serverkit
 """
+
 from typing import List, Type
 from pathlib import Path
 import numpy as np
@@ -45,7 +46,7 @@ class Parameters(BaseModel):
         return points_array
 
 
-class Server(serverkit.Server):
+class TrackpyServer(serverkit.AlgorithmServer):
     def __init__(
         self,
         algorithm_name: str = "trackpy",
@@ -73,9 +74,7 @@ class Server(serverkit.Server):
 
         tracks = linkage_df[["particle", "frame", "y", "x"]].values.astype(float)
 
-        return [
-            (tracks, {"name": "Tracks"}, "tracks")
-        ]
+        return [(tracks, {"name": "Tracks"}, "tracks")]
 
     def load_sample_images(self) -> List["np.ndarray"]:
         """Loads one or multiple sample images."""
@@ -84,7 +83,7 @@ class Server(serverkit.Server):
         return images
 
 
-server = Server()
+server = TrackpyServer()
 app = server.app
 
 if __name__ == "__main__":
